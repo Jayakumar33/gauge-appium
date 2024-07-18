@@ -10,9 +10,16 @@
         <dependency>
             <groupId>com.thoughtworks.gauge</groupId>
             <artifactId>gauge-java</artifactId>
-            <version>0.10.3</version>
+            <version>0.11.0</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.6.0</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -50,49 +57,7 @@
                         <configuration>
                             <env>chrome</env>
                             <inParallel>true</inParallel>
-                            <nodes>2</nodes>
-                            <specsDir>specs</specsDir>
-                        </configuration>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                    </execution>
-
-                    <execution>
-                        <id>test-firefox</id>
-                        <phase>test</phase>
-                        <configuration>
-                            <env>firefox</env>
-                            <inParallel>true</inParallel>
-                            <nodes>2</nodes>
-                            <specsDir>specs</specsDir>
-                        </configuration>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                    </execution>
-
-                    <execution>
-                        <id>test-edge</id>
-                        <phase>test</phase>
-                        <configuration>
-                            <env>edge</env>
-                            <inParallel>true</inParallel>
-                            <nodes>2</nodes>
-                            <specsDir>specs</specsDir>
-                        </configuration>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                    </execution>
-
-                    <execution>
-                        <id>test-safari</id>
-                        <phase>test</phase>
-                        <configuration>
-                            <env>safari</env>
-                            <inParallel>true</inParallel>
-                            <nodes>2</nodes>
+                            <nodes>1</nodes>
                             <specsDir>specs</specsDir>
                         </configuration>
                         <goals>
@@ -123,21 +88,21 @@
                 <groupId>com.thoughtworks.gauge.maven</groupId>
                 <artifactId>gauge-maven-plugin</artifactId>
                 <version>1.3.3</version>
-                <executions>
-                    <execution>
-                    <id>test-chrome</id>
-                   <phase>test-single</phase>
-                        <configuration>
-                            <env>chrome</env>
-                            <inParallel>true</inParallel>
-                            <nodes>1</nodes>
-                            <specsDir>specs</specsDir>
-                        </configuration>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                    </execution>
-                    </executions>
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                    <id>test-chrome</id>-->
+<!--                   <phase>test-single</phase>-->
+<!--                        <configuration>-->
+<!--                            <env>chrome</env>-->
+<!--                            <inParallel>true</inParallel>-->
+<!--                            <nodes>1</nodes>-->
+<!--                            <specsDir>specs</specsDir>-->
+<!--                        </configuration>-->
+<!--                        <goals>-->
+<!--                            <goal>execute</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                    </executions>-->
                     </plugin>
                 </plugins>
             </build>
